@@ -13,7 +13,7 @@ public class HelloSSMController {
 
 	@Autowired
 	private IStuService ss;
-	
+
 	@RequestMapping("/sayHello")
 	public String sayHello(Map<String,Object> map){
 		map.put("stuInfo", ss.getStuInfoByNo("0001"));
