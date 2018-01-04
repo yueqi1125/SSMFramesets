@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.xtit.ssm.test.service.IStuService;
+import com.xtit.ssm.test.service.student.IStuService;
 
 @Controller
 public class HelloSSMController {

@@ -1,4 +1,4 @@
-package com.xtit.ssm.test.service;
+package com.xtit.ssm.test.service.student;
 
 import com.xtit.ssm.test.entity.StuInfo;
 

@@ -1,9 +1,9 @@
-package com.xtit.ssm.test.service;
+package com.xtit.ssm.test.service.student;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.xtit.ssm.test.dao.StuMapper;
+import com.xtit.ssm.test.dao.student.StuMapper;
 import com.xtit.ssm.test.entity.StuInfo;
 
 @Service

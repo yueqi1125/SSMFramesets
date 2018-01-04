@@ -1,4 +1,4 @@
-package com.xtit.ssm.test.dao;
+package com.xtit.ssm.test.dao.student;
 
 import org.springframework.stereotype.Repository;
 
