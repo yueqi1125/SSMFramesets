@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xtit.ssm.test.dao.StuMapper">
+
+	<!-- 开启缓存 -->
+	<cache/>
+	<!-- 
+		若javabean的字段名和数据库不相符
+		使用resultMap标签
+		<resultMap type="com.xtit.ssm.test.entity.StuInfo" id="StuInfo">
+			<id column="" property=""/>
+			<result column="" property=""/>
+			<result column="" property=""/>
+			<result column="" property=""/>
+			<result column="" property=""/>
+		</resultMap>
+	 -->
+	 
+	<select id="queryStuInfoByNo" parameterType="String" resultType="com.xtit.ssm.test.entity.StuInfo">
+		SELECT * FROM student WHERE stu_no = #{value}
+	</select>
+
+</mapper>

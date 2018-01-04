@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Hello framework!</h1>
+	${stuInfo }
 </body>
 </html>
