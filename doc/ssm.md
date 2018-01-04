@@ -143,10 +143,10 @@
 		    	<property name="prefix" value="/views/"></property>
 		    	<property name="suffix" value=".jsp"></property>
 		    </bean> 
-		    <!-- 将默认的文件交给默认的处理器处理 -->
-		    <mvc:default-servlet-handler/> 
-		    <!--  -->
-		    <mvc:annotation-driven></mvc:annotation-driven>
+		    <!-- 处理静态资源请求，非静态转移至DispatcherServlet -->
+			<mvc:default-servlet-handler />
+			<!-- 提供Controller请求转发，json自动转化等功能 -->
+			<mvc:annotation-driven></mvc:annotation-driven>
 		</beans>
 3、配置Mybatis
 	1>添加jar包，配置pom.xml
