@@ -15,4 +15,20 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>classpath:config/spring/applicationContext.xml</param-value>
 	</context-param>
+	
+	<!-- (2)配置前端控制器 -->
+	<!-- Spring MVC 集中访问点，负责调度工作，流程控制 -->
+	<servlet>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:config/spring/applicationContext-mvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DispatcherServlet</servlet-name>
+		<!-- 前端页面→/; 后端系统→*.action -->
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
 </web-app>
