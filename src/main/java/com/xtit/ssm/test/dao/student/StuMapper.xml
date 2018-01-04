@@ -4,7 +4,10 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xtit.ssm.test.dao.student.StuMapper">
 
-	<!-- 开启缓存 -->
+	<!-- 
+		开启缓存
+		二级缓存开启后，让需要使用二级缓存的POJO类实现Serializable接口，即POJO类的序列化
+	-->
 	<cache/>
 	<!-- 
 		若javabean的字段名和数据库不相符

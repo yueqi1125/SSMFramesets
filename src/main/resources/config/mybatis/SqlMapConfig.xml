@@ -6,6 +6,7 @@
 <configuration>
 	<!-- 二级缓存配置 -->
 	<settings>
+		<!-- true开启 -->
 		<setting name="cacheEnabled" value="true"/>
 	</settings>
 	
