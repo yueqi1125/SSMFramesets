@@ -190,3 +190,20 @@
 			<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
 			<property name="basePackage" value="com.xtit.ssm.*.dao"></property>
 		</bean>
+4、ioc相关配置
+	1>配置applicationContext-ioc.xml文件
+		<?xml version="1.0" encoding="UTF-8"?>
+		<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans
+               http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+               http://www.springframework.org/schema/context/spring-context.xsd ">     
+			<bean id="stuService" class="com.xtit.ssm.test.service.student.StuService">
+				<property name="stuDao" ref="stuDao"></property>
+			</bean> 
+		</beans>
+	2>在applicationContext.xml文件中载入applicationContext-ioc.xml文件
+		<import resource="classpath:config/spring/applicationContext-ioc.xml"/>
+	3>删除手动装配的javabean文件中相关的注解
