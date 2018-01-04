@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<!-- 二级缓存配置 -->
+	<settings>
+		<setting name="cacheEnabled" value="true"/>
+	</settings>
+	
+	<!-- 
+		注册mapper 
+		<mappers>
+			<package name="com.xtit.ssm.test.entity"/>
+		</mappers>
+	-->
+</configuration>

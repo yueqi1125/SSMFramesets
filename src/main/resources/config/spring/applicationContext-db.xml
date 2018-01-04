@@ -21,4 +21,16 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 		<property name="username" value="${mysql_user}"></property>
 		<property name="password" value="${mysql_passwd}"></property>
 	</bean> 
+	
+	<!-- 配置session工厂bean文件 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:config/mybatis/SqlMapConfig.xml"></property>
+	</bean>
+	
+	<!-- 将对应的接口的类型改造为MapperFactoryBean -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+		<property name="basePackage" value="com.xtit.ssm.*.dao"></property>
+	</bean>
 </beans>
